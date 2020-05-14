@@ -46,4 +46,5 @@ class EncountersController < ApplicationController
     def find_encounter
         @encounter = Encounter.find(params[:id]) 
     end
+    
 end

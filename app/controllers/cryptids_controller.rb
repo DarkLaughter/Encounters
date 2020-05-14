@@ -1,5 +1,5 @@
 class CryptidsController < ApplicationController
-    before_action :find_user, only: [:show, :edit, :update, :delete, :destroy]
+    before_action :find_cryptid, only: [:show, :edit, :update, :destroy]
 
     def index
         @cryptids = Cryptid.all
@@ -10,7 +10,7 @@ class CryptidsController < ApplicationController
     end
     
     def create
-
+        @cryptid = Cryptid.create(cryptid_params)
         if @cryptid.valid?
             redirect_to cryptid_path(@cryptid), notice: "Cryptid Successfully Added"
         else
@@ -43,7 +43,7 @@ class CryptidsController < ApplicationController
         params.require(:cryptid).permit(:name, :characteristics, :country, :lore, :img_url)
     end
 
-    def find_user
+    def find_cryptid
         @cryptid = Cryptid.find(params[:id])
     end
 end

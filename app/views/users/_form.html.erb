@@ -1,0 +1,25 @@
+<%= form_for @user do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :username %>
+<%= f.text_field :username %>
+
+<%= f.label :password %>
+<%= f.text_field :password %>
+
+<%= f.label :password_confirmation, "Confirm Password" %>
+<%= f.text_field :password_confirmation %>
+
+<%= f.label :age %>
+<%= f.number_field :age %>
+
+<%= f.label :contact %>
+<%= f.text_field :contact %>
+
+<%= f.label :background %>
+<%= f.text_field :background %>
+
+<%= f.submit %>
+<% end %>
