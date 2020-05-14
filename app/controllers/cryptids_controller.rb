@@ -23,6 +23,7 @@ class CryptidsController < ApplicationController
     end
     
     def update
+        @cryptid = Cryptid.find(params[:id])
         @cryptid.update(cryptid_params)
         redirect_to cryptid_path(@cryptid)
     end
