@@ -1,0 +1,11 @@
+<h1><%= @cryptid.name %></h1>
+
+<p></p>
+<%=image_tag("#{@cryptid.img_url}", width: "50%", alt: "#{@cryptid.name}")%>
+<p>Country <br /><%= @cryptid.country %></p>
+<p>characteristics <br /><%= @cryptid.characteristics %></p>
+<p>Lore <br /><%= @cryptid.lore %></p>
+
+ <%= link_to '<button type="button">Edit Cryptid Information</button>'.html_safe, edit_cryptid_path %>
+ <%= button_to "Delete Cryptid", cryptid_path(@cryptid), method: :delete %>
+ 

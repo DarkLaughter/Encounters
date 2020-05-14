@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_05_12_222949) do
 
   create_table "cryptids", force: :cascade do |t|
     t.string "name"
-    t.string "category"
+    t.string "characteristics"
     t.string "country"
     t.text "lore"
     t.string "img_url"

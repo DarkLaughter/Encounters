@@ -1,0 +1,21 @@
+<%= form_for @cryptid do |f| %>
+
+    <%= f.label :name, 'Name' %><br/>
+    <%= f.text_field :name %><br/>
+
+    <%= f.label :characteristics, 'Characteristics' %><br/>
+    <%= f.text_field :characteristics %><br/>
+
+    <%= f.label :country, 'Country' %><br/>
+    <%= f.text_field :country %><br/>
+
+    <%= f.label :lore, 'Lore' %><br/>
+    <%= f.text_area :lore %><br/>
+
+    <%= f.label :img_url, 'Link To Image' %><br/>
+    <%= f.text_field :img_url %><br/>
+
+    <%= f.hidden_field :user_id, value: session[:user_id] %>
+
+    <%= f.submit %>
+<% end %>
