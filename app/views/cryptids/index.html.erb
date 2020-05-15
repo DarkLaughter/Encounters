@@ -1,6 +1,13 @@
-<h1>Current Cryptid Database</h1>
+<div class="row">
+<div class="col"></div>
+<div class ="col-mid-7">
+<h1>Cryptid Database</h1>
 
 <% @cryptids.each do |cryptid| %>
     <p><br /><%= link_to cryptid.name, cryptid_path(cryptid) %></p>
+
     <%=image_tag("#{cryptid.img_url}", width: "20%", alt: "#{cryptid.name}")%>
 <% end %>
+</div>
+<div class="col"></div>
+</div>
