@@ -1,0 +1,19 @@
+<%= form_for @appearance do |f| %>
+
+<%= f.label :movie %>
+<%= f.text_field :movie %>
+
+<%= f.label :tv_show, 'Televsion' %>
+<%= f.text_field :tv_show %>
+
+<%= f.label :fiction %>
+<%= f.text_field :fiction %>
+
+<%= f.label :non_fiction %>
+<%= f.text_field :non_fiction %>
+
+<%= f.label :cryptid_id %>
+<%= f.collection_select  :cryptid_id, Cryptid.all, :id, :name %>
+
+<%= f.submit %>
+<% end %>

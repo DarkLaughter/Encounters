@@ -18,7 +18,6 @@ class AppearancesController < ApplicationController
     end
     
     def show
-    
     end
     
     def destroy
