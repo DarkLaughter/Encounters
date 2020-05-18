@@ -1,1 +1,7 @@
-@encounter
+<h3>Latest sighting of <%= @encounter.cryptid.name %></h3>
+<p>Date: <%= @encounter.date %></p>
+<p>Story: <%= @encounter.story %></p>
+<p>Posted By: <%= @encounter.user.name %></p>
+
+<p><%= link_to "All Sightings of Bigfoot", encounters_path %></p>
+ 

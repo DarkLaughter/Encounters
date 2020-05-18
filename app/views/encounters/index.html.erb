@@ -1,5 +1,7 @@
 <h1>All time list of encounters</h1>
 
-<% @encounters.each.do |e| %>
-<p>Title: <%= e.location %>|| <%=e.date  %></p> 
+<% @encounters.each do |e| %>
+<p>Cryptid: <%= link_to e.cryptid.name, cryptid_path(e.cryptid_id) %></p>
+<p>Location: <%= e.location %>|| <%=link_to e.date, encounter_path(e.cryptid_id)  %></p> 
+<p>Posted by: <%= e.user.username %></p>
 <% end %>

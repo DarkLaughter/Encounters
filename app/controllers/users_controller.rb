@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     end
     
     def create
-        byebug
         @user = User.create(user_params)
         if @user.valid?
             redirect_to user_path(@user), notice: "Profile Success"

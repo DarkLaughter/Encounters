@@ -15,13 +15,13 @@ class EncountersController < ApplicationController
         if @encounter.valid?
             redirect_to cryptid_path(@encounter.cryptid_id), notice: "Thank You for sharing"
         else
+            byebug
             flash[:errors] = @encounter.errors.full_messages
             redirect_to new_encounter_path
         end
     end
     
     def edit
-    
     end
     
     def update
@@ -30,17 +30,16 @@ class EncountersController < ApplicationController
     end
     
     def show
-        
     end
     
     def destroy
         @encounter.destroy 
-        redirect_to encounters_path, :notice "Encounter Deleted"
+        redirect_to encounters_path
     end
 
     private 
     def encounter_params
-        params.require(:encounter).permit(:variable)
+        params.require(:encounter).permit(:location, :date, :story, :cryptid_id, :user_id)
     end
 
     def find_encounter

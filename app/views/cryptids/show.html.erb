@@ -5,6 +5,7 @@
 <p>Country <br /><%= @cryptid.country %></p>
 <p>characteristics <br /><%= @cryptid.characteristics %></p>
 <p>Lore <br /><%= @cryptid.lore %></p>
+<p>Last Sighting: <%= link_to @cryptid.encounters.last.date, encounter_path(@cryptid.encounters.last.id) %></p>
 
  <%= link_to '<button type="button">Edit Cryptid Information</button>'.html_safe, edit_cryptid_path %>
  <%= button_to "Delete Cryptid", cryptid_path(@cryptid), method: :delete %>
