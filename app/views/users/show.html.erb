@@ -1,6 +1,9 @@
 <h1>Welcome <%= @user.name %></h1>
 
 <p>Current Contact Info</p>
+<strong>Email Contact</strong>
 <p><%= @user.contact %></p>
-<p>Listed Background</p>
+<p>Background</p>
 <p><%= @user.background %></p>
+
+<%= link_to '<button type="button">Edit Your Account</button>'.html_safe, edit_user_path %>
